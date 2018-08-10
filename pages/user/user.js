@@ -1,8 +1,7 @@
 //logs.js
 const util = require('../../utils/util.js')
-import store from '../../stores/UserStore';
-import { observer } from "../../utils/observer";
-Page(observer({ store/*,otherStore*/ })({
+
+Page({
   data: {
     logs: []
   },
@@ -13,4 +12,4 @@ Page(observer({ store/*,otherStore*/ })({
       })
     })
   }
-}))
+})

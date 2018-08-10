@@ -1,0 +1,4 @@
+<view>age: {{store.age}}</view>
+<view>{{store.say}}</view>
+<view>{{title}}</view>
+<view>{{parent}}</view>

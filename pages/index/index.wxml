@@ -8,6 +8,7 @@
             <text class="userinfo-nickname">{{userInfo.nickName}}</text>
         </block>
     </view>
+    <Item parent="index"></Item>
     <view>age: {{store.age}}</view>
     <view>{{store.say}}</view>
     <button bindtap="tapAdd">add</button>

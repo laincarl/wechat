@@ -8,9 +8,9 @@ Component(observer({ store/*,otherStore*/ })({
       value: '标题'     // 属性初始值（可选），如果未指定则会根据类型选择一个
     },
     // 弹窗内容
-    parent :{
-      type : String ,
-      value : '弹窗内容'
+    parent: {
+      type: String,
+      value: '弹窗内容'
     },
   },
 
@@ -19,7 +19,7 @@ Component(observer({ store/*,otherStore*/ })({
   },
   //事件处理函数
 
-  onLoad: function () {    
+  onLoad: function () {
 
   },
 }))

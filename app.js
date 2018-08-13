@@ -9,9 +9,12 @@ App({
     // 判断是否登录
     let token = wx.getStorageSync('token');
     if (!token) {
-      this.goLoginPageTimeOut()
+      wx.navigateTo({
+        url: "/pages/login/login"
+      })
       return
     }
+    // 检查token是否正确
     wx.request({
       method: 'POST',
       url: this.globalData.baseURL + '/user/check-token',
@@ -21,17 +24,12 @@ App({
       success: function (res) {
         if (res.data.status != 1) {
           wx.removeStorageSync('token')
-          this.goLoginPageTimeOut()
+          wx.navigateTo({
+            url: "/pages/login/login"
+          })
         }
       }
     })
-  },
-  goLoginPageTimeOut: function () {
-    setTimeout(function () {
-      wx.navigateTo({
-        url: "/pages/login/login"
-      })
-    }, 1000)
   },
   globalData: {
     baseURL: 'http://localhost:9300'

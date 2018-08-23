@@ -1,0 +1,22 @@
+/* pages/main/main.wxss */
+
+.container {
+  background: #eee;
+}
+
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: content-box;
+  padding: 24rpx;
+}
+
+.item {
+  background: white;
+  width: 339rpx;
+  height: 472rpx;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+}

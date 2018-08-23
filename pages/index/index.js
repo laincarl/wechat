@@ -22,11 +22,14 @@ Page(observer({ store/*,otherStore*/ })({
   onShow: function () {
     let userInfo = wx.getStorageSync('userInfo')
     if (!userInfo) {
-      wx.redirectTo({ url: '/pages/login/login' })
+      wx.navigateTo({ url: '/pages/login/login' })
     } else {
       this.setData({
         userInfo
       })
     }
   },
+  toLogin: function () {
+    wx.navigateTo({ url: '/pages/login/login' })
+  }
 }))

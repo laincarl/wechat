@@ -33,7 +33,8 @@ Page({
             that.login();
           } else {
             // 回到原来的地方
-            wx.switchTab({ url: '/pages/index/index' });
+            // wx.switchTab({ url: '/pages/index/index' });
+            wx.navigateBack();
           }
         }
       })
@@ -65,11 +66,22 @@ Page({
             }
             wx.setStorageSync('token', res.data.data.token);
             // 回到原来的地方放
-            wx.switchTab({ url: '/pages/index/index' });
+            // wx.switchTab({ url: '/pages/index/index' });
+            wx.navigateBack();
+          },
+          fail: function (err) {
+            console.log(err);
+            wx.showModal({
+              title: "登录错误",
+              content: err.errMsg
+            })
           }
         })
       }
     })
+  },
+  onBack: function () {
+    wx.navigateBack();
   },
   /**
    * 生命周期函数--监听页面加载

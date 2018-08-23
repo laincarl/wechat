@@ -1,2 +1,3 @@
 <!--pages/login/login.wxml-->
 <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 允许应用授权 </button>
+<button bindtap="onBack">back</button>

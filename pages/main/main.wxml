@@ -1,0 +1,8 @@
+<!-- pages/main/main.wxml -->
+<view class="container">
+
+  <text class="iconfont icon-sousuo">pages/main/main.wxml</text>
+  <view class="item-container">
+    <Item class="item" wx:for="{{items}}" title="{{item.title}}" price="{{item.price}}"></Item>
+  </view>
+</view>

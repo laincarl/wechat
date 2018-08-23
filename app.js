@@ -32,7 +32,8 @@ App({
     })
   },
   globalData: {
-    baseURL: 'http://localhost:9300'
+    baseURL: 'https://localhost:9300',
+    // baseURL: 'https://192.168.31.51:9300',
     // userInfo: null,
   }
 })

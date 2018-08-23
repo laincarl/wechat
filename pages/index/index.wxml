@@ -9,6 +9,7 @@
     <view>age: {{store.age}}</view>
     <view>{{store.say}}</view>
     <button bindtap="tapAdd">add</button>
+    <button bindtap="toLogin">toLogin</button>
     <view class="usermotto">
         <progress percent="20" show-info />
         <text class="user-motto">{{motto}}</text>
